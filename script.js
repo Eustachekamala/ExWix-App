@@ -1,30 +1,28 @@
 const dashBoardSection = document.querySelector("#container-dashboard");
 const card_Items = document.querySelector("#card-items");
-const createItemForm = document.querySelector("#create-item");
-const name = document.querySelector("#name");
-const price =  document.querySelector("#price");
-const image = document.querySelector("#image");
-const quantity = document.querySelector("#quantity");
-const comment = document.querySelector("#comment");
 
+document.addEventListener("DOMContentLoaded", () => {
+  let form = document.querySelector("form")
+    form.addEventListener("submit", (e) => {
+        addItem(e)
+    form.reset();
+  })
 
-createItemForm.addEventListener("click", addItem);
-
+})
 // Function to add an item to the DB
 function addItem(e) {
   e.preventDefault(); // Prevent default form submission
 
   let itemDetails = {
-    name: name.value,
-    price: Math.floor(price.value), 
-    quantity: Math.floor(quantity.value),
-    image: image.value,
-    comment: comment.value,
+    name:e.target.name.value,
+    price: Math.floor(e.target.price.value), 
+    quantity: Math.floor(e.target.quantity.value),
+    image: e.target.image.value,
+    comment: e.target.comment.value,
   };
 
   renderOneItem(itemDetails); // Render the item locally
   addItemsPost(itemDetails);
-  createItemForm.reset(); // Reset the form after submission
 }
 
 // Function to render a single item
