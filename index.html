@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExWix Inventoy App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body class="m-0 p-0 font-serif text-center">
+        <!--Container section dashboard-->
+        <section class="" id="container-dashboard">
+            <div class="flex flex-row justify-between w-full h-20 p-5 shadow md:flex" >
+                <h2 class=" flex flex-row items-center gap-8 w-1/3 font-bold text-blue-400 text-2xl p-2 md:shrink-0 max-md:text-lg max-sm:text-sm" id="site_name"><span class="material-icons p-2 h-10 w-10 flex gap-3 rounded-xl bg-blue-400 text-white">person</span>EsWIx Shop</h2>
+                    <header class="flex flex-row justify-around w-1/3 py-2">
+                        <a class="hover:text-blue-400 hover:border-b-2" href="#">Home</a>
+                        <a class="hover:text-blue-400 hover:border-b-2"  href = "#">About</a>
+                        <!-- <a class="hover:text-blue-400 hover:border-b-2"  href="#">Contact</a> -->
+                        <a class="hover:text-blue-400 hover:border-b-2"  href="#">Blog</a>
+                         <!-- <a class="hover:text-blue-400 hover:border-b-2"  href="#">Careers</a> -->
+                    </header>
+                    <button type="button" class="flex gap-3 p-2 rounded-xl bg-blue-400 text-white hover:bg-blue-600"><span class="material-icons">logout</span></button>
+             </div>
+            
+            <div class="flex flex-row">
+                <aside class="py-8 px-4 h-full rounded m-4">
+                    <h1 class="font-bold text-2xl h-14 items-center w-full bg-blue-400 text-white py-2 rounded-tl-xl rounded-tr-xl">STOCK</h1>
+                    <form class="flex flex-col gap-6 w-full h-full border justify-around p-8" action="" method="post" id="requestForm" target="_blank">
+                        <div class="flex flex-row gap-8 w-full justify-between text-sm">
+                            <label HTMLfor="name">NAME</label>
+                            <input class="p-2 outline-none border-b-2 w-64"  id="name" type="text" placeholder="enter the item name" name="name">
+                        </div>
+                        <div class="flex flex-row gap-8 w-full justify-between text-sm">
+                            <label HTMLfor="price">PRICE</label>
+                            <input class="p-2 outline-none border-b-2 w-64" type="number" placeholder="enter the price" id="price" name="price">
+                        </div>
+                        <div class="flex flex-row gap-8  w-full justify-between text-sm">
+                            <label HTMLfor="quantity">Qte</label>
+                            <input class="p-2 w-64 outline-none border-b-2" type="number" placeholder="enter the quantity" id="quantity" name="quantity">
+                        </div>
+                        <div class="flex flex-row gap-8  w-full justify-between text-sm">
+                            <label HTMLfor="image">IMAGE</label>
+                            <input class="p-2 outline-none border-b-2 w-64" type="url" placeholder="enter the url of the photo" id="image" name="image">
+                        </div>
+                        <div class="w-full flex flex-col text-sm">
+                            <label HTMLfor="comment">COMMENT</label>
+                            <textarea class="border w-full h-28" name="comment" id="comment"></textarea>
+                        </div>
+                    </form>
+                        <button type="" class="flex w-28 gap-2 p-2 my-4 rounded-xl bg-blue-400 text-white hover:bg-blue-600 mx-40" id="create-item"><span class="material-icons">add</span>Add Item</button>
+                </aside>
+
+                <ul id="card-items" class="container mx-auto products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8 px-4"></ul>
+            </div>
+        </section>
+        <script src="./script.js"></script>
+    </body>
+</html>

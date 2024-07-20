@@ -1,26 +1,15 @@
 {
-  "name": "project_data",
+  "name": "eswix-inventory-management",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Is a website for the Inventory Management of Stocks",
+  "main": "tailwind.config.js",
   "scripts": {
-    "start": "node index.js",
+    "tailwind":"npx tailwindcss -i ./src/input.css -o ./style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/UmaSahni/project_data.git"
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/UmaSahni/project_data/issues"
-  },
-  "homepage": "https://github.com/UmaSahni/project_data#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "json-serve": "^0.1.0",
-    "json-server": "^0.17.1"
-  }
+  "license": "ISC"
 }
