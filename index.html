@@ -22,8 +22,8 @@
                     <button type="button" class="flex gap-3 p-2 rounded-xl bg-blue-400 text-white hover:bg-blue-600"><span class="material-icons">logout</span></button>
              </div>
             
-            <div class="flex flex-row">
-                <aside class="py-8 px-4 h-full rounded m-4">
+            <div class="flex flex-row justify-center mt-4">
+                <aside class="p-4 max-w-md py-8 px-8 h-full rounded">
                     <h1 class="font-bold text-2xl h-14 items-center w-full bg-blue-400 text-white py-2 rounded-tl-xl rounded-tr-xl">STOCK</h1>
                     <form class="flex flex-col gap-6 w-full h-full border justify-around p-8" action="" method="post" id="requestForm" target="_blank">
                         <div class="flex flex-row gap-8 w-full justify-between text-sm">
@@ -50,7 +50,7 @@
                     </form>
                 </aside>
 
-                <ul id="card-items" class="container mx-auto products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8 px-4"></ul>
+                <ul id="card-items" class="flex flex-wrap justify-center mt-4"></ul>
             </div>
         </section>
         <script src="./script.js"></script>

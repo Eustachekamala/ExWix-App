@@ -35,14 +35,28 @@ function renderOneItem(item) {
       
       <div class="flex flex-col gap-2 shadow-2xl bg-white w-24 p-2 rounded-xl">
         <p>${item.name}</p>
-        <p>${item.price}</p>
-        <p>${item.quantity}</p>
+        <p>${item.price}$</p>
+        <p id="numberItem">${item.quantity}</p>
       </div>
     </div>
     <p class="w-full h-72 bg-blue-400 p-4 rounded-bl-2xl rounded-br-2xl rounded-tl-3xl text-white shadow-2xl">${item.comment}</p>
+    <div class="flex flex-row justify-around w-full">
+      <button id="btn-delete" class="flex gap-4 w-4 rounded-xl"><span class="material-icons">delete</span></button>
+      <button id="btn-update" class="flex gap-4 w-4 rounded-xl "><span class="material-icons">local_mall</span></button>
+    </div>
   `;
   card_Items.appendChild(card);
-  
+  card.querySelector("#btn-delete").addEventListener("click", () => {
+    card.remove()
+    confirm("Would you confirm to delete It?")
+    deteleItems(item.id);
+  })
+
+  card.querySelector("#btn-update").addEventListener("click", () => {
+    item.quantity -= 1;
+    alert('One phone is purchassed');
+    card.querySelector("#numberItem").textContent = item.quantity;
+  })
 }
 
 // Fetch request to get all items
@@ -79,6 +93,32 @@ function addItemsPost(itemDetails) {
     .catch(error => console.error("Error adding item:", error));
 }
 
+function deteleItems(id){
+  fetch(`http://localhost:3000/phones/${id}`,{
+    method:"DELETE",
+    headers:{
+      "Content-type" : "application/json",
+      "Accept" : "application/json"
+    }
+  })
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+
+function updateDate(quantity){
+  fetch(`http://localhost:3000/phones/${quantity.id}`,{
+    method:"PATCH",
+    headers:{
+      "Content-type" : "application/json",
+      "Accept" : "application/json"
+    },
+    body:JSON.stringify(quantity)
+  })
+    .then(res => res.json())
+    .then(data => console.log(data)).catch(error => {
+      console.log("Impossimble to upDate an Item" + error)
+    })
+}
 // Initialize the application
 function initialize() {
   getItems();
