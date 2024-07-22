@@ -12,7 +12,7 @@ This is a simple web application that allows users to manage a list of phones in
 ### Technologies Used
 
 - **JavaScript**: Used for client-side scripting to handle DOM manipulation and API interactions.
-- **HTML/CSS**: Basic structure and styling for the user interface.
+- **HTML/TAILWINDCSS/CSS**: Basic structure and styling for the user interface.
 - **Fetch API**: Used to make HTTP requests to the local server (`http://localhost:3000`) for CRUD operations.
 
 ### Application Structure
