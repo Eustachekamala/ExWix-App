@@ -1,14 +1,6 @@
 {
   "phones": [
     {
-      "id": "1",
-      "name": "Iphone15",
-      "price": 200,
-      "quantity": 15,
-      "image": "https://cdn.shopify.com/s/files/1/0824/3121/t/204/assets/iphone14-1682521510040.png?v=1682521526",
-      "comment": "The iPhone 15 features a 6.1-inch (155 mm) display with Super Retina XDR OLED technology at a resolution of 2556×1179"
-    },
-    {
       "id": "2",
       "name": "Pixel",
       "price": 150,
